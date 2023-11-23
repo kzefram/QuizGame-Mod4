@@ -1,0 +1,35 @@
+* {
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    background-color: #006985;
+    margin: 0;
+}
+
+header {
+    color: antiquewhite;
+    display: flex;
+
+}
+
+.quiz {
+    padding: 20px;
+    margin: 100px 300px;
+    display: flexbox;
+    justify-content: center;
+    background-color: antiquewhite;
+    
+}
+
+.questions {
+    background-color: antiquewhite;
+    padding: 20px;
+    margin: 100px 300px;
+}
+
+footer {
+    color: antiquewhite;
+    margin: 75px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}

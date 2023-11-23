@@ -45,6 +45,7 @@ In this site, I have utilized the knowledge I have learned through my studies. I
 - Karen Bourgeois,
 - UNB/Edx,
 - https://www.joshwcomeau.com/css/custom-css-reset/
+- GeeksforGeeks
 
 ## Badges
 

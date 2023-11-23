@@ -1,33 +1,114 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 
-<html lang="en">
+<html lang="en"> 
 
-<head>
-    <meta charset="UTF-8">
+<head> 
+	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Free coding quiz">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Karen Bourgeois">
+    <link rel="stylesheet" href="./Assets/CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Coding Quiz</title>
-</head>
+</head> 
 
-<body>
+<body> 
+	<div> 
+		<header> 
+			<div class="High-Score"> 
+				<a href="#">High Scores</a> 
+			</div> 
 
-    <header id = "header-box" >
-        <h1 id="heading-one">Free Coding Quiz</h1>
-        <h2 id="heading-two">Testing Your Knowledge</h2>
-    </header>
+			<div class="timer"> 
+				<p>Time: <span id="timer">0</span></p> 
+			</div> 
+		</header> 
 
-    <section>
-        <p id="High-Score" class="High-Score">High Score</p>
-        <p id="Timer" class="timer">Timer: </p>
-    </section>
+		<main > 
 
-    <section>
-        <p id="Para-one">Anaswer all the questions in the set amount of time. One answer per questions and you will have one minute to complete.</p>
-        <button type="submit" id="btn-1" class="button">Start</button>
-    </section>
+            <section class="quiz">
+                 <div>
+                    <h1>Coding Quiz</h1>
+                    <p>This is a simple quiz to check your knowledge base. You'll have one minute to answer all five questions. You will know as you go if you got the answer correct. It's about the knowledge, not how fast you can go.</p>
+                </div>
+            </section>
+            <section class="questions">
+                <hr>
+                <div id="question1">
+                    <p>Question 1: What does HTML stand for?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">Help The Man Live</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">However the magistrate loves</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">HyperText Mark-up Language</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">Hal Tal Misses Love</label>
+                    </div>
+                </div>
+                <br>
+                <div id="question2">
+                    <p>Question 2: What does CSS stand for?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">Canada Still Saves</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">Cascading Style Sheet</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">Casandra Saves Silver</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">Can Sally Sing</label>
+                    </div>
+                </div>
+                <br>
+                <div id="question3">
+                    <p>Question 3: What does JavaScript do to a website?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">Makes the website dance/functional</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">Picks its nose</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">Takes over the world</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">Can Sally Sing</label>
+                    </div>
+                </div>
+            </section>
+            
+            <footer>
+                <h6>Copyright &copy;2023 Karen Bourgeois</h6>
+            </footer>
 
-</body>
+		</main>
+	<script src="./Assets/JS/script.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body> 
 
 </html>
+
+
+
