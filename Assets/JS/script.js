@@ -1,23 +1,56 @@
-var answer1 = document.getElementById(flexRadioDefault3);
-var answer2 = document.getElementById(flexRadioDefault6);
-var answer3 = document.getElementById(flexRadioDefault9);
-var answer4 = document.getElementById(flexRadioDefault15);
-var answer5 = document.getElementById(flexRadioDefault20);
-var btn = document.getElementById(submit-btn);
-var start = document.getElementById(start-btn);
-var timer = document.getElementById(timer);
-var question1 = document.getElementById(question1);
-var question2 = document.getElementById(question2);
-var question3 = document.getElementById(question3);
-var question4 = document.getElementById(question4);
-var question5 = document.getElementById(question5);
+// var quiz = document.getElementById(Quiz);
+// var start = document.getElementById(start-btn);
+// var timer = document.getElementById(timer);
+var score = 0;
 
-function q1() {
-   if (question1 === answer1) {
-    alert("That's Correct!")
-} 
-    else {
-        alert("Sorry, that is incorrect.")
+
+var questions = [
+    {
+        prompt: " What does HTML stand for?\n(a) Help The Man Live\n(b) However the magistrate loves\n(c) HyperText Mark-up Language\n(d) Hal Tal Misses Love",
+        answer: "c"
+    },
+    {
+        prompt: "What does CSS stand for?\n(a) Canada Still Saves\n(b) Cascading Style Sheet\n(c) Casandra Saves Silver\n(d) Can Sally Sing",
+        answer: "b"
+    },
+    {
+        prompt: "What does JavaScript do to a website?\n(a) Makes the website dance/functional\n(b) Picks its nose\n(c) Takes over the world\n(d) Babysits",
+        answer: "a"
+    },
+    {
+        prompt: "When did HTML begin?\n(a) 1789\n(b) 2021\n(c) 1993\n(d) 2000BCE",
+        answer: "c"
+    },
+    {
+        prompt: " When did CSS begin?\n(a) 15BCE\n(b) 1550\n(c) Yesterday\n(d) 1996",
+        answer: "d"
+    }
+]
+
+
+for(var i = 0; i < questions.length; i++) {
+    let response = window.prompt(questions[i].prompt);
+    if(response == questions[i].answer){
+         score++;
+         alert("Correct!");
+    } else {
+         alert("WRONG!");
     }
 }
+alert("you got " + score + "/" + questions.length);
 
+
+// start.addEventListener('click', function countdown(seconds) {
+
+//     let count = seconds;
+
+//     const interval = setInterval(timer => {
+//         document.write(counter);
+//         counter--;
+
+//         if (counter < 0) {
+//             cleanInterval(interval);
+//             alert('Ding! Times up!');
+//         }
+//     }, 6000)
+// });
