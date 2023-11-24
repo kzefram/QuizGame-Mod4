@@ -1,6 +1,6 @@
-// var quiz = document.getElementById(Quiz);
-// var start = document.getElementById(start-btn);
-// var timer = document.getElementById(timer);
+var quiz = document.getElementById('Quiz');
+var start = document.getElementById('start-btn');
+var timer = document.getElementById('timer');
 var score = 0;
 
 
@@ -28,29 +28,33 @@ var questions = [
 ]
 
 
-for(var i = 0; i < questions.length; i++) {
-    let response = window.prompt(questions[i].prompt);
-    if(response == questions[i].answer){
-         score++;
-         alert("Correct!");
-    } else {
-         alert("WRONG!");
+
+
+
+start.addEventListener('click', function countdown(seconds) {
+    console.log("hello");
+    let count = seconds;
+
+    const interval = setInterval(timer => {
+
+        document.getElementById('timer').innerText(counter);
+        counter--;
+
+        if (counter < 0) {
+            cleanInterval(interval);
+            alert('Ding! Times up!');
+        }
+    }, 6000)
+
+
+    for(var i = 0; i < questions.length; i++) {
+        let response = window.prompt(questions[i].prompt);
+        if(response === questions[i].answer) {
+            score++;
+            alert("Correct!");
+        } else {
+            alert("WRONG!");
+        }
     }
-}
-alert("you got " + score + "/" + questions.length);
-
-
-// start.addEventListener('click', function countdown(seconds) {
-
-//     let count = seconds;
-
-//     const interval = setInterval(timer => {
-//         document.write(counter);
-//         counter--;
-
-//         if (counter < 0) {
-//             cleanInterval(interval);
-//             alert('Ding! Times up!');
-//         }
-//     }, 6000)
-// });
+    alert("you got " + score + "/" + questions.length);
+});
