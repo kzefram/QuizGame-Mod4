@@ -24,6 +24,14 @@ SO THAT I can gauge my progress compared to my peers
 - WHEN the game is over
 - THEN I can save my initials and my score
 
+## Picture
+
+[Screen shot of the application](<Assets/Images/Screenshot 2023-11-24 145736.png>)
+
+## Deployment
+
+https://kzefram.github.io/QuizGame-Mod4/
+
 ## Table of Contents
 
 - [Installation](#installation)
