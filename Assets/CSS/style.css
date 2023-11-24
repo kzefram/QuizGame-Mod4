@@ -36,10 +36,46 @@ header {
     padding-top: 25px;
 }
 
+#question2 {
+    padding-top: 25px;
+}
+
+#question3 {
+    padding-top: 25px;
+}
+
+#question4 {
+    padding-top: 25px;
+}
+
+#question5 {
+    padding-top: 25px;
+}
+
 .submit-btn {
+    margin: 80px;
     padding: 20px 50px 20px 50px;
     background-color: antiquewhite;
     color: #006985;
+    border-radius: 30px;
+    font-weight: bold;
+    border-style: groove;
+    border-color: #006985;
+    display: flex;
+    justify-content: center;
+}
+
+.start-btn {
+    margin: 50px;
+    padding: 20px 100px 20px 100px;
+    background-color: antiquewhite;
+    color: #006985;
+    border-radius: 30px;
+    font-weight: bold;
+    border-color: #006985;
+    border-style: groove;
+    display: flex;
+    justify-content: center;
 }
 
 
