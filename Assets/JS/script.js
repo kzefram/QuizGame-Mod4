@@ -1,6 +1,7 @@
 var quiz = document.getElementById('Quiz');
 var start = document.getElementById('start-btn');
 var timer = document.getElementById('timer');
+var question = document.querySelector("")
 var score = 0;
 var counter = 60;
 var intervalID;
@@ -47,6 +48,22 @@ start.addEventListener('click', function countdown(seconds) {
         }
     }, 1000)
 
+    var currentQuestion = 
+    
+    $(".#Quiz").each(function() {
+      var time = parseInt($(this).attr("id").split("-")[1])
+      if (time<currenthour){
+        $(this).addClass("past")
+      } else if (time === currenthour){
+        $(this).removeClass("past")
+        $(this).addClass("present")
+      } else {
+        $(this).removeClass("past")
+        $(this).removeClass("present")
+        $(this).addClass("future")
+      }
+  
+    })
 
     for(var i = 0; i < questions.length; i++) {
         let response = window.prompt(questions[i].prompt);
@@ -57,5 +74,7 @@ start.addEventListener('click', function countdown(seconds) {
             alert("WRONG!");
         }
     }
-    alert("you got " + score + "/" + questions.length);
+    
 });
+
+alert("you got " + score + "/" + questions.length);
