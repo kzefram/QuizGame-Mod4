@@ -2,7 +2,8 @@ var quiz = document.getElementById('Quiz');
 var start = document.getElementById('start-btn');
 var timer = document.getElementById('timer');
 var score = 0;
-
+var counter = 60;
+var intervalID;
 
 var questions = [
     {
@@ -35,16 +36,16 @@ start.addEventListener('click', function countdown(seconds) {
     console.log("hello");
     let count = seconds;
 
-    const interval = setInterval(timer => {
-
-        document.getElementById('timer').innerText(counter);
+    intervalID = setInterval(() => {
+        console.log(counter)
+        document.getElementById('timer').textContent = counter;
         counter--;
 
         if (counter < 0) {
-            cleanInterval(interval);
+            cleanInterval(intervalID);
             alert('Ding! Times up!');
         }
-    }, 6000)
+    }, 1000)
 
 
     for(var i = 0; i < questions.length; i++) {
