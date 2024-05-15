@@ -12,73 +12,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Coding Quiz</title>
 </head> 
 
 <body> 
-	<div> 
-		<header> 
-			<a class="High-Score" href="#">High Scores</a>
-			<p class="timer">Time: <span id="timer">0</span></p>
-            
-		</header> 
+	<div class="container">
+        <div id="home" class="flex-center flex-column">
+            <h1>Coding Quiz Challenge</h1>
+            <h3 class="para-home">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</h3>
+            <a href="/Assets/Pages/game.html" class="btn">Start Game</a>
+            <a href="/Assets/Pages/high-score.html" class="btn">High Score</a>
+        </div>
+    </div>
 
-		<main > 
 
-            <section class="quiz" >
-               
-                    <h1>Coding Quiz</h1>
-                    <p class="instructions">This is a simple quiz to check your knowledge base. You'll have one minute to answer all five questions. You will know as you go if you got the answer correct. It's about the knowledge, not how fast you can go.</p>
-                    <button class="start-btn" id="start-btn">Start</button>
-                <hr>
-            </section>
-                
-            
-            <div class="Quiz-1">
-                <p>Question1: What does HTML stand for?</p>
-                <button>a: Help The Man Live</button>
-                <button>b: However the magistrate loves</button>
-                <button>c: HyperText Mark-up Language</button>
-                <button>d: Hal Tal Misses Love</button>
-            </div>
-            <div class="Quiz-2">
-                <p>Question2: What does CSS stand for?</p>
-                <button>a: Canada Still Saves</button>
-                <button>b: Cascading Style Sheet</button>
-                <button>c: Casandra Saves Silver</button>
-                <button>d: Can Sally Sing</button>
-            </div>
-            <div class="Quiz-3">
-                <p>Question3: What does JavaScript do to a website?</p>
-                <button>a: Makes the website dance/functional</button>
-                <button>b: Picks its nose</button>
-                <button>c: Takes over the world</button>
-                <button>d: Babysits</button>
-            
-            <div class="Quiz-4">
-                <p>Question4: When did HTML begin?</p>
-                <button>a: 1789</button>
-                <button>b: 2021</button>
-                <button>c: 1993</button>
-                <button>d: 2000BCE</button>
-            </div>
-            <div class="Quiz-5">
-                <p>Question5: When did CSS begin?</p>
-                <button>a: 15BCE</button>
-                <button>b: 1550</button>
-                <button>c: Yesterday</button>
-                <button>d: 1996</button>
-            </div>
-           
-            <hr>
-            <footer>
-                <h6>Copyright &copy;2023 Karen Bourgeois</h6>
-            </footer>
-
-		</main>
 	<script src="./Assets/JS/script.js"></script> 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body> 
 
 </html>
