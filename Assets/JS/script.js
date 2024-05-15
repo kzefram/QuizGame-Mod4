@@ -29,10 +29,6 @@ var questions = [
     }
 ]
 
-
-
-
-
 start.addEventListener('click', function countdown(seconds) {
     console.log("hello");
     let count = seconds;
@@ -71,7 +67,7 @@ start.addEventListener('click', function countdown(seconds) {
             score++;
             alert("Correct!");
         } else {
-            alert("WRONG!");
+            alert("OOPS! Wrong Answer");
         }
     }
     

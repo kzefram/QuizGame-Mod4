@@ -1,5 +1,11 @@
 # QuizGame
 
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+
 ## Description
 
 A quiz to test your knowledge of coding and prepare for the interview process. In this project, I will be using HTML, CSS and JavaScript. It will include a timer, data-storage, screen change, five questions and high score list.
@@ -26,7 +32,7 @@ SO THAT I can gauge my progress compared to my peers
 
 ## Pictures
 
-[Screen shot of the application](<Assets/Images/Screenshot 2023-11-24 145736.png>)
+
 
 
 
@@ -34,11 +40,7 @@ SO THAT I can gauge my progress compared to my peers
 
 https://kzefram.github.io/QuizGame-Mod4/
 
-## Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
 
 ## Installation
 
