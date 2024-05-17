@@ -1,76 +1,94 @@
-var quiz = document.getElementById('Quiz');
-var start = document.getElementById('start-btn');
-var timer = document.getElementById('timer');
-var question = document.querySelector("")
-var score = 0;
-var counter = 60;
-var intervalID;
+const question = document.getElementById("Question");
+const choices = Array.from(document.getElementsByClassName("choice-text"));
 
-var questions = [
+let currentQuestion = {};
+let acceptingAnswers = false;
+let score = 0;
+var questioncounter = 0;
+let availableQuestions = [];
+
+let questions = [
     {
-        prompt: " What does HTML stand for?\n(a) Help The Man Live\n(b) However the magistrate loves\n(c) HyperText Mark-up Language\n(d) Hal Tal Misses Love",
-        answer: "c"
+        question: " What does HTML stand for?",
+        choice1: "Help The Man Live",
+        choice2: "However the magistrate loves",
+        choice3: "HyperText Mark-up Language",
+        choice4: "Hal Tal Misses Love",
+        answer: 3
     },
     {
-        prompt: "What does CSS stand for?\n(a) Canada Still Saves\n(b) Cascading Style Sheet\n(c) Casandra Saves Silver\n(d) Can Sally Sing",
-        answer: "b"
+        question: "What does CSS stand for?",
+        choice1: "Canada Still Saves",
+        choice2: "Cascading Style Sheet",
+        choice3: "Casandra Saves Silver",
+        choice4: "Can Sally Sing",
+        answer: 3
     },
     {
-        prompt: "What does JavaScript do to a website?\n(a) Makes the website dance/functional\n(b) Picks its nose\n(c) Takes over the world\n(d) Babysits",
-        answer: "a"
+        question: "What does JavaScript do to a website?", 
+        choice1: "Makes the website dance/functional", 
+        choice2: "Picks its nose",
+        choice3: "Takes over the world",
+        choice4: "Babysits",
+        answer: 1
     },
     {
-        prompt: "When did HTML begin?\n(a) 1789\n(b) 2021\n(c) 1993\n(d) 2000BCE",
-        answer: "c"
+        question: "When did HTML begin?",
+        choice1: "1789",
+        choice2: "2021",
+        choice3: "1993",
+        choice4: "2000BCE",
+        answer: 3
     },
     {
-        prompt: " When did CSS begin?\n(a) 15BCE\n(b) 1550\n(c) Yesterday\n(d) 1996",
-        answer: "d"
+        question: " When did CSS begin?",
+        choice1: "15BCE",
+        choice2: "1550",
+        choice3: "Yesterday",
+        choice4: "1996",
+        answer: 4
     }
 ]
 
-start.addEventListener('click', function countdown(seconds) {
-    console.log("hello");
-    let count = seconds;
+const CORRECT_BONUS = 5;
+const MAX_QUESTIONS = 4;
 
-    intervalID = setInterval(() => {
-        console.log(counter)
-        document.getElementById('timer').textContent = counter;
-        counter--;
 
-        if (counter < 0) {
-            cleanInterval(intervalID);
-            alert('Ding! Times up!');
-        }
-    }, 1000)
+startGame = () => {
+    questionCounter = 0;
+    score = 0;
+    availableQuesions = [...questions];
+    getNewQuestion();
+};
 
-    var currentQuestion = 
-    
-    $(".#Quiz").each(function() {
-      var time = parseInt($(this).attr("id").split("-")[1])
-      if (time<currenthour){
-        $(this).addClass("past")
-      } else if (time === currenthour){
-        $(this).removeClass("past")
-        $(this).addClass("present")
-      } else {
-        $(this).removeClass("past")
-        $(this).removeClass("present")
-        $(this).addClass("future")
-      }
-  
-    })
-
-    for(var i = 0; i < questions.length; i++) {
-        let response = window.prompt(questions[i].prompt);
-        if(response === questions[i].answer) {
-            score++;
-            alert("Correct!");
-        } else {
-            alert("OOPS! Wrong Answer");
-        }
+getNewQuestion = () => {
+    if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+        //go to the end page
+        return window.location.assign('/end.html');
     }
-    
+    questionCounter++;
+    const questionIndex = Math.floor(Math.random() * availableQuesions.length);
+    currentQuestion = availableQuesions[questionIndex];
+    question.innerText = currentQuestion.question;
+
+    choices.forEach((choice) => {
+        const number = choice.dataset['number'];
+        choice.innerText = currentQuestion['choice' + number];
+    });
+
+    availableQuesions.splice(questionIndex, 1);
+    acceptingAnswers = true;
+};
+
+choices.forEach((choice) => {
+    choice.addEventListener('click', (e) => {
+        if (!acceptingAnswers) return;
+
+        acceptingAnswers = false;
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset['number'];
+        getNewQuestion();
+    });
 });
 
-alert("you got " + score + "/" + questions.length);
+startGame();
